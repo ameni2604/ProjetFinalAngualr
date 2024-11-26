@@ -1,0 +1,70 @@
+<app-header></app-header>
+<div class="container mt-4">
+  @for (el of productId; track $index) { @if (el.id == identifiant) {
+  <div class="product-card p-4 rounded shadow-lg">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="image-container">
+          <img [src]="el.Images[0]" class="img-fluid product-image" alt="{{ el.name }}" id="mainImage" />
+        </div>
+
+        <div class="sub-images mt-3">
+          <h5>Sous-images :</h5>
+          <div class="d-flex">
+            @for (subImage of el.ListeDesImages; track $index) {
+            <img [src]="subImage" class="img-thumbnail mr-2 sub-image" (click)="changeMainImage(subImage)"
+              alt="Sous-image" />
+            }
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <h2 class="product-title">{{ el.name }}</h2>
+        <p class="product-desc">
+          <strong>Description :</strong> {{ el.description }}
+        </p>
+        <p><strong>Référence :</strong> {{ el.reference }}</p>
+        <p><strong>Prix :</strong> {{ el.price | dinar }}</p>
+        <p><strong>Poids :</strong> {{ el.weight }}</p>
+        <p><strong>Dimensions :</strong> {{ el.dimensions }}</p>
+        <p><strong>Matériau :</strong> {{ el.material }}</p>
+        <p>
+          <strong>Disponibilité :</strong>
+          {{ el.availability ? "Disponible" : "Indisponible" }}
+        </p>
+        <button class="btn btn-dark btn-lg mt-3 ajout" (click)="ajouterAuPanier(el)">
+          Ajouter au panier
+        </button>
+      </div>
+    </div>
+
+    @if (el.commentaire.length > 0) {
+    <div class="comments-section mt-4 p-3">
+      <h5>Commentaires :</h5>
+      @for (com of el.commentaire; track $index) {
+      <div class="comment-card p-2 mb-3">
+        <strong>{{ com.author }}</strong> {{ com.date }}
+        <div class="d-flex align-items-center">
+          <span class="text-muted ms-2">- {{ com.text }}</span>
+        </div>
+      </div>
+      }
+    </div>
+    }
+    <form action="#" class="form-group" [formGroup]="comForm">
+      <label for="commentaire">Nouveaux commentaire :</label>
+      <input type="text" formControlName="comt" class="form-control" />
+      @if(comt?.invalid && comt?.touched){
+      <div class="alert alert-warning">
+        le commenatire est vide.
+      </div>
+      }
+      <button (click)="ajouterCommentaire(el.id)" class="btn btn-dark btn-lg mt-3 ajout" [disabled]="comForm.invalid">
+        ajouter un commentaire
+      </button>
+    </form>
+  </div>
+  } }
+</div>
+<app-footer></app-footer>

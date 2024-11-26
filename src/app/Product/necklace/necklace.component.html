@@ -1,0 +1,29 @@
+<app-header></app-header>
+<div class="divPrinc">
+  <div class="container">
+    <div class="row">
+      @for(el of products ;track $index){
+      <div class="col-md-3 mb-4">
+
+        <div class="card h-100 text-center">
+          <div class="img-hover">
+            <img [src]="el.Images[0]" class="card-img-top" alt="image de necklace">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">{{ el.name }}</h5>
+            <p class="card-text">{{ el.price|dinar }}</p>
+            <button class="btn btn-dark" (click)="ajouterAuPanier(el)">
+              Ajouter au panier <span></span>
+            </button>
+            <button class="btn btn-dark"><a [routerLink]="['/necklace',el.id]">
+                Voir details </a><span></span>
+            </button><br>
+
+          </div>
+        </div>
+
+      </div>
+      }
+    </div>
+  </div>
+  <app-footer></app-footer>

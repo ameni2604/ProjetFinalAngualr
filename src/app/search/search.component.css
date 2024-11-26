@@ -1,0 +1,44 @@
+
+.img-hover {
+  position: relative;
+  overflow: hidden;
+}
+
+.img-hover img {
+  transition: transform 0.3s ease, opacity 0.3s ease ;
+}
+
+.img-hover:hover img {
+  transform: scale(1.2); 
+  opacity: 0.6;
+  
+}
+
+.card {
+  border: none; 
+}
+
+.card-body {
+  padding: 1rem;
+  font-size: 0.9rem;
+}
+
+.card-title {
+  font-weight: bold;
+  font-size: 1rem;
+}
+button{
+  transition: opacity 0.4s ease-in-out, color 0.4s ease-in-out;
+}
+button:hover{
+  opacity: 0.6;
+  color: rgb(249, 204, 231);
+}
+a{
+  text-decoration: none;
+  color: white;
+}
+
+.divPrinc{
+  margin-top: 20px;
+}

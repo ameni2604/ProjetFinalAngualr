@@ -1,0 +1,28 @@
+.about-container {
+    margin-top: 50px;
+  }
+  .developer-card {
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  .developer-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
+  }
+  .profile-pic {
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+  }
+  .developer-info h3 {
+    font-size: 1.5rem;
+    color: #333;
+  }
+  .developer-info p {
+    margin: 5px 0;
+    color: #555;
+  }
+  .ambitions {
+    font-style: italic;
+    color: #777;
+  }

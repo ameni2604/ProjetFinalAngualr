@@ -1,0 +1,51 @@
+<app-header></app-header>
+
+
+
+<div class="divPrinc">
+  <div class="container">
+    <div class="row">
+      @if(storedData.length ==0){
+      <h2> Le recherche donne :</h2>
+      <div class="alert alert-warning">
+        aucun résultat trouvé
+      </div>
+      }
+      @for(data of storedData ;track $index){
+      <div class="col-md-3 mb-4">
+
+        <div class="card h-100 text-center">
+          <div class="img-hover">
+            <img [src]="data.Images[0]" class="card-img-top" alt="image de necklace">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">{{ data.name }}</h5>
+            <p class="card-text">{{ data.price }} TND</p>
+            <button class="btn btn-dark" (click)="ajouterAuPanier(data)">
+              Ajouter au panier <span></span>
+            </button>
+            @if(data.sectionName=="Necklace"){
+            <button class="btn btn-dark"><a [routerLink]="['/necklace',data.id]">
+                Voir details </a><span></span>
+            </button><br>
+            }
+            @else if(data.sectionName=="Earrings"){
+            <button class="btn btn-dark"><a [routerLink]="['/ring',data.id]">
+                Voir details </a><span></span>
+            </button><br>
+            }
+            @else {
+            <button class="btn btn-dark"><a [routerLink]="['/bracelet',data.id]">
+                Voir details </a><span></span>
+            </button><br>
+            }
+
+          </div>
+        </div>
+
+      </div>
+      }
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>

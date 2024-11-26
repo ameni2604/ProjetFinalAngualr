@@ -1,0 +1,90 @@
+<app-header></app-header>
+
+<section>
+
+  <div class="marquee-bar">
+    <div class="marquee-content">
+      <span>🚨 Early Black Friday Specials! Up to 40% OFF</span>
+      <span>Free Delivery over $100</span>
+      <span>New Arrivals Weekly</span>
+      <span>Shop Now and Save Big 🚨</span>
+    </div>
+  </div>
+</section>
+
+<section>
+
+  <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <video class="d-block w-100" autoplay loop muted style="height: 500px; object-fit: cover;">
+          <source src="video/vdo1.mp4" type="video/mp4">
+        </video>
+        <div class="title-video">NOUVELLE COLLECTION</div>
+        <div class="title-bien">BIENVENUE SUR</div>
+        <div class="title-projet">Pivonie Rose</div>
+      </div>
+      <div class="carousel-item">
+        <video class="d-block w-100" autoplay loop muted style="height: 500px; object-fit: cover;">
+          <source src="video/vdo2.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="carousel-item">
+        <video class="d-block w-100" autoplay loop muted style="height: 500px; object-fit: cover;">
+          <source src="video/vdo3.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+      data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+      data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</section>
+
+<section>
+
+
+  <div class="container d-flex justify-content-between my-4">
+
+    <div class="card custom-card" style="width: 18rem;">
+      <img src="images/necklace.jpg" class="card-img-top custom-img hover-img" alt="Necklace">
+      <div class="card-body">
+        <h5 class="card-title">Necklace</h5>
+        <p class="card-text">Discover our beautiful collection of necklaces.</p>
+        <a routerLink="/necklace" class="btn custom-btn">Voir les articles</a>
+      </div>
+    </div>
+
+
+    <div class="card custom-card" style="width: 18rem;">
+      <img src="images/ring.jpg" class="card-img-top custom-img hover-img" alt="Ring">
+      <div class="card-body">
+        <h5 class="card-title">Ring</h5>
+        <p class="card-text">Browse through our elegant rings selection.</p>
+        <a routerLink="/ring" class="btn custom-btn">Voir les articles</a>
+      </div>
+    </div>
+
+
+    <div class="card custom-card" style="width: 18rem;">
+      <img src="images/braclet.jpg" class="card-img-top custom-img hover-img" alt="Bracelet">
+      <div class="card-body">
+        <h5 class="card-title">Bracelet</h5>
+        <p class="card-text">Check out our collection of stylish bracelets.</p>
+        <a routerLink="/bracelet" class="btn custom-btn">Voir les articles</a>
+      </div>
+    </div>
+  </div>
+
+
+
+</section>
+
+<app-footer></app-footer>

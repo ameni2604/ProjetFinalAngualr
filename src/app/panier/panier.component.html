@@ -1,0 +1,30 @@
+<app-header></app-header>
+<div class="container mt-5">
+  <h2 class="mb-4">Votre Panier</h2>
+  @if(produits.length === 0){
+  <div class="alert alert-warning">
+    Votre panier est vide.
+  </div>
+  }
+  @for(produit of produits; track $index; let i=$index){
+  <div class="card mb-3 shadow-sm">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img [src]="produit.Images[0]" class="img-fluid rounded-start" alt="{{ produit.name }}" />
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">{{ produit.name }}</h5>
+          <p class="card-text"><strong>Prix :</strong> {{ produit.price | dinar }}</p>
+          <button class="btn btn-danger btn-sm" (click)="supprimerProduit(i)">
+            Supprimer
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  }
+</div>
+
+
+<app-footer></app-footer>

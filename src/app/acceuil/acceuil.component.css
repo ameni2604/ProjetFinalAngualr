@@ -1,0 +1,136 @@
+* {
+  font-family: 'Poppins', sans-serif; 
+  font-weight: 400; 
+}
+.marquee-bar {
+  background-color: rgba(238, 143, 194, 0.3); 
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding: 10px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.marquee-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  animation: marquee 20s linear infinite;
+}
+
+.marquee-content span {
+  padding: 0 50px;
+  white-space: nowrap;
+}
+
+@keyframes marquee {
+  0% {
+      transform: translateX(100%);
+  }
+  100% {
+      transform: translateX(-100%);
+  }
+}
+
+
+.title-video, .title-bien, .title-projet {
+  position: absolute;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  width: 100%;
+  font-size: 3rem;
+  animation: soft-pink-brown-glow 2.5s ease-in-out infinite alternate;
+}
+
+.title-video {
+  top: 35%;
+  margin-bottom: 20px;
+  font-size: 3.5rem;
+  text-shadow: 0 0 15px rgba(255, 192, 203, 0.5), 0 0 20px rgba(139, 69, 19, 0.4);
+}
+
+.title-bien {
+  margin-bottom: 20px;
+  top: 50%;
+  font-size: 2.5rem;
+  text-shadow: 0 0 12px rgba(255, 192, 203, 0.4), 0 0 18px rgba(139, 69, 19, 0.3);
+}
+
+.title-projet {
+  top: 65%;
+  font-size: 2rem;
+  color: rgb(87, 84, 85);
+  text-shadow: 0 0 15px rgba(255, 182, 193, 0.5), 0 0 25px rgba(139, 69, 19, 0.4);
+}
+
+@keyframes soft-pink-brown-glow {
+  0% {
+      text-shadow: 0 0 10px rgba(255, 192, 203, 0.5), 0 0 20px rgba(139, 69, 19, 0.4);
+  }
+  50% {
+      text-shadow: 0 0 25px rgba(255, 182, 193, 0.6), 0 0 35px rgba(139, 69, 19, 0.5);
+  }
+  100% {
+      text-shadow: 0 0 15px rgba(255, 192, 203, 0.5), 0 0 25px rgba(139, 69, 19, 0.4);
+  }
+}
+.my-4 {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+
+.hover-img:hover {
+  opacity: 0.8;
+}
+
+
+.custom-card {
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+}
+.custom-card:hover {
+  transform: scale(1.02);
+}
+
+
+.custom-img {
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px 8px 0 0;
+}
+
+
+.custom-btn {
+  background-color: #f8a5c2; 
+  color: white;
+  border-radius: 20px;
+  padding: 10px 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+.custom-btn:hover {
+  background-color: #f06292;
+}
+
+.card-body {
+  text-align: center;
+  padding: 15px;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.card-text {
+  font-size: 0.95rem;
+  color: #666;
+}
