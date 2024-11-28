@@ -10,8 +10,8 @@
   }
   .profile-pic {
     border-radius: 50%;
-    width: 120px;
-    height: 120px;
+    width: 150px;
+    height: 180px;
     object-fit: cover;
   }
   .developer-info h3 {

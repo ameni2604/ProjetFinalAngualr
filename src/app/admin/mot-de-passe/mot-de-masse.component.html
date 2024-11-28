@@ -1,0 +1,17 @@
+<div class="container mt-5">
+  <h2>Change Password</h2>
+  <form [formGroup]="passwordForm" (ngSubmit)="onSubmit()">
+    <div class="mb-3">
+      <label class="form-label">Enter email:</label>
+      <input id="email" type="email" formControlName="email" />
+    </div>
+
+    <button type="submit" class="btn btn-primary">valid</button>
+
+  </form></div>
+
+
+  
+
+
+<router-outlet></router-outlet>

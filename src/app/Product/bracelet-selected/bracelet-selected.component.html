@@ -1,11 +1,11 @@
 <app-header></app-header>
 <div class="container mt-4">
-  @for (el of productId; track $index) { @if (el.id == identifiant) {
+  @for (el of productId; track $index) { @if (el.id == identifiant.toString()) {
   <div class="product-card p-4 rounded shadow-lg">
     <div class="row">
       <div class="col-md-6">
         <div class="image-container">
-          <img [src]="el.Images[0]" class="img-fluid product-image" alt="{{ el.name }}" id="mainImage" />
+          <img [src]="el.Images" class="img-fluid product-image" alt="{{ el.name }}" id="mainImage" />
         </div>
 
         <div class="sub-images mt-3">

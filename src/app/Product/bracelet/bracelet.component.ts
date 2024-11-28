@@ -6,11 +6,12 @@ import { FooterComponent } from "../../Footer/footer/footer.component";
 import { RouterLink } from '@angular/router';
 import { DinarPipe } from '../../dinar.pipe';
 import { PanierServiceService } from '../../Service/panier-service.service';
+import { NgClass } from '@angular/common';
 
 @Component({
   selector: 'app-bracelet',
   standalone: true,
-  imports: [HeaderComponent, FooterComponent,RouterLink,DinarPipe],
+  imports: [HeaderComponent, FooterComponent,RouterLink,DinarPipe,NgClass],
   templateUrl: './bracelet.component.html',
   styleUrl: './bracelet.component.css'
 })

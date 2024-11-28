@@ -2,7 +2,6 @@ import { Component, OnInit ,inject} from '@angular/core';
 import { FooterComponent } from '../Footer/footer/footer.component';
 import { HeaderComponent } from '../Header/header/header.component';
 import { ProductSericeService } from '../Service/product-serice.service';
-import { Client } from '../Class/client';
 import { PanierServiceService } from '../Service/panier-service.service';
 import { DinarPipe } from '../dinar.pipe';
 
@@ -15,6 +14,7 @@ import { DinarPipe } from '../dinar.pipe';
 })
 export class PanierComponent implements OnInit {
   produits: any[] = [];
+  total:number=0;
 
   constructor(private panierService: PanierServiceService) {}
 
@@ -24,6 +24,9 @@ export class PanierComponent implements OnInit {
 
   chargerProduits(): void {
     this.produits = this.panierService.obtenirProduits();
+    this.produits.forEach(prod =>{this.total+=prod.price})
+
+
   }
 
   supprimerProduit(index: number): void {

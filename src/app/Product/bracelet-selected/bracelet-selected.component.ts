@@ -17,7 +17,7 @@ import { PanierServiceService } from '../../Service/panier-service.service';
   styleUrl: './bracelet-selected.component.css'
 })
 export class BraceletSelectedComponent {
-  identifiant:number=0;
+  identifiant:string='';
   activatedRoute:ActivatedRoute=inject(ActivatedRoute);
   productId:Product[]=[];
 
@@ -44,14 +44,14 @@ export class BraceletSelectedComponent {
       return this.comForm.get('comt');
 
     }
-    ajouterCommentaire(id: number) {
+    ajouterCommentaire(id: string) {
       const commentaire = {
       author: 'User 1', 
       text: this.getCom(),
       rating: 5, 
       date: new Date().toLocaleDateString() 
     };
-    this.productservice.addComment(id, "Bracelets",commentaire).subscribe(
+    this.productservice.addComment(id,"Bracelets",commentaire).subscribe(
       (data) => {
         console.log("commenatire ajouter avec succes:", data);
       }

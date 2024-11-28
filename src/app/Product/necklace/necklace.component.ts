@@ -9,11 +9,13 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { DinarPipe } from '../../dinar.pipe';
 import { PanierServiceService } from '../../Service/panier-service.service';
+import { NgClass } from '@angular/common';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-necklace',
   standalone: true,
-  imports: [HeaderComponent,FooterComponent,RouterLink,DinarPipe],
+  imports: [HeaderComponent,FooterComponent,RouterLink,DinarPipe,ReactiveFormsModule,NgClass],
   templateUrl: './necklace.component.html',
   styleUrl: './necklace.component.css'
 })

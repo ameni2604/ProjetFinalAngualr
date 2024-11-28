@@ -1,0 +1,163 @@
+<div class="container mt-5">
+    <div class="card shadow">
+        <div class="card-header text-center bg-primary text-white">
+            <h2 class="mb-0">Add New Product</h2>
+        </div>
+        <div class="card-body">
+            <form (ngSubmit)="onSubmit()" [formGroup]="productForm">
+
+
+                <div class="mb-3">
+                    <label for="name" class="form-label">Nom de produit :</label>
+                    <input type="text" id="name" class="form-control" formControlName="name">
+                    @if(name?.errors?.['required'] && name?.touched){
+                    <div class="text-danger">
+                        Name est un champ obligatoire.
+                    </div>
+                    }
+                    @if(name?.errors?.['pattern'] && name?.touched){
+                    <div class="text-danger">
+                        Name doit se commancer par un lettre majscule .
+                    </div>
+                    }
+                </div>
+
+                <div class="mb-3">
+                    <label for="category" class="form-label">Category :</label>
+                    <select id="category" class="form-select" formControlName="sectionName">
+                        <option value="" disabled>Select Category</option>
+                        <option value="Bracelets">Bracelets</option>
+                        <option value="Necklaces">Necklaces</option>
+                        <option value="Earrings">Earrings</option>
+
+                    </select>
+                    @if(sectionName?.errors?.['required'] && sectionName?.touched){
+                    <div class="text-danger">
+                        Category est un champ obligatoire.
+                    </div>
+                    }
+                </div>
+
+                <div class="mb-3">
+                    <label for="price" class="form-label">Prix (TND):</label>
+                    <input type="number" id="price" class="form-control" formControlName="price">
+                    @if(price?.errors?.['min'] && price?.touched){
+                    <div class="text-warning">
+                        Price doit etre positive.
+                    </div>
+                    }
+                    @if(price?.errors?.['required'] && price?.touched){
+                    <div class="text-danger">
+                        Price est un champ obligatoire.
+                    </div>
+                    }
+                </div>
+
+                <div class="mb-3">
+                    <label for="stock" class="form-label">Quantites dans le stock :</label>
+                    <input type="number" id="stock" class="form-control" formControlName="quantity">
+                    @if(quantity?.errors?.['min'] && quantity?.touched){
+                    <div class="text-warning">
+                        Price doit etre positive.
+                    </div>
+                    }
+                    @if(quantity?.errors?.['required'] && quantity?.touched){
+                    <div class="text-danger">
+                        Stock quantity est un champ obligatoire.
+                    </div>
+                    }
+
+                </div>
+                <div class="mb-3">
+                    <label for="description" class="form-label">Description de produit :</label>
+                    <textarea id="description" class="form-control" formControlName="description"></textarea>
+                    @if(description?.errors?.['required'] && description?.touched){
+                    <div class="text-danger">
+                        Description est un champ obligatoire.
+                    </div>}
+                    @if(description?.errors?.['minlength'] && description?.touched){
+                    <div class="text-warning">
+                        Description doit avoir 10 caracter au minimum.
+                    </div>
+                    }
+                </div>
+                <div class="mb-3">
+                    <label for="material" class="form-label">Materiel :</label>
+                    <input type="text" id="material" class="form-control" formControlName="material">
+                    @if(material?.errors?.['required'] && material?.touched){
+                    <div class="text-danger">
+                        Material est un champ obligatoire.
+                    </div>
+                    }
+                </div>
+                <div class="mb-3">
+                    <label for="weight" class="form-label">Poids de produits :</label>
+                    <input type="text" id="weight" class="form-control" formControlName="weight">
+                    @if(weight?.errors?.['required'] && weight?.touched){
+                    <div class="text-danger">
+                        poids est un champ obligatoire.
+                    </div>
+                    }
+                    @if(weight?.errors?.['pattern'] && weight?.touched){
+                    <div class="text-danger">
+                        poids est sous le format suivant : 'chiffres'+g.
+                    </div>
+                    }
+                </div>
+
+                <div class="mb-3">
+                    <label for="dimensions" class="form-label">Dimensions :</label>
+                    <input type="text" id="dimensions" class="form-control" formControlName="dimensions">
+                    @if(dimensions?.errors?.['required'] && dimensions?.touched){
+                    <div class="text-danger">
+                        Dimensions est un champ obligatoire.
+                    </div>
+                    }
+                </div>
+                <div class="mb-3">
+                    <label for="image" class="form-label">Images initial de produits :</label>
+                    <input type="text" id="image" class="form-control" formControlName="Images" multiple>
+                    @if(Images?.errors?.['required'] && Images?.touched){
+                    <div class="text-danger">
+                        Image est un champ obligatoire
+                    </div>
+                    }
+                </div>
+
+                <div class="mb-3">
+                    <label for="additionalImages" class="form-label">Images details de produit :</label>
+                    <div formArrayName="ListeDesImages">
+                        @for( img of prodImages.controls ;track $index ;let indice=$index){
+                        <label for="Images" class="form-label">Images {{indice+1}}:</label>
+                        <input type="text" id="additionalImages" class="form-control" [formControlName]="indice"
+                            placeholder="Ajouter un couleur">
+
+                        }
+                    </div>
+                </div>
+                <button (click)="onAddImages()" type="button" class="btn btn-sm btn-secondary"
+                    [disabled]="prodImages.invalid" id="ajouterImages">Ajouter un nouveau
+                    Images</button>
+
+
+                <div class="mb-3">
+                    <h5> la liste des couleurs </h5>
+                    <div formArrayName="color">
+                        @for( col of prodColor.controls ;track $index ;let indice=$index){
+                        <label for="colors" class="form-label">Couleurs {{indice+1}}:</label>
+                        <input type="text" id="colors" class="form-control" [formControlName]="indice"
+                            placeholder="Enter un couleur">
+
+                        }
+                    </div>
+                </div>
+                <button (click)="onAddCol()" type="button" class="btn btn-sm btn-secondary"
+                    [disabled]="prodColor.invalid" id="ajoutcouleur">Ajouter un nouveau
+                    couleur</button>
+
+                <button type="submit" class="btn btn-primary w-100" [disabled]="productForm.invalid">Add
+                    Product</button>
+            </form>
+        </div>
+    </div>
+</div>

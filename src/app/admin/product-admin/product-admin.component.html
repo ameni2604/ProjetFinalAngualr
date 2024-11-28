@@ -1,0 +1,26 @@
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Product Management</h2>
+
+    <div class="text-end mb-3">
+        <button class="btn btn-warning"><a routerLink="/admin/addProduct">Add New Product</a></button>
+    </div>
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
+
+        @for (p of products; track $index) {
+        <div class="card h-100 shadow-sm">
+            <img [src]="p.Images" class="card-img-top" alt="{{ p.name }}" style="height: 200px; object-fit: cover;">
+
+            <div class="card-body text-center">
+                <h5 class="card-title">{{ p.name }}</h5>
+                <p class="card-text text-muted">{{ p.price | dinar }}</p>
+            </div>
+
+            <div class="card-footer text-center">
+                <button class="btn btn-warning btn-sm" [routerLink]="['/admin/editProduct', p.id]">Edit</button>
+                <button class="btn btn-danger btn-sm ms-2" (click)="deleteProduct(p.id)">Delete</button>
+            </div>
+        </div>
+        }
+    </div>
+</div>
+<router-outlet></router-outlet>

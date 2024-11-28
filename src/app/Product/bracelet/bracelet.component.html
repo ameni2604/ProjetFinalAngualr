@@ -7,13 +7,16 @@
 
         <div class="card h-100 text-center">
           <div class="img-hover">
-            <img [src]="el.Images[0]" class="card-img-top" alt="image de necklace">
+            <img [src]="el.Images" class="card-img-top" alt="image de necklace">
           </div>
           <div class="card-body">
             <h5 class="card-title">{{ el.name }}</h5>
             <p class="card-text">{{ el.price |dinar}}</p>
-            <button class="btn btn-dark" (click)="ajouterAuPanier(el)">
-              Ajouter au panier <span></span>
+
+            <button class="btn btn-dark btn-lg mt-3 ajout" [disabled]="!el.availability"
+              [ngClass]="{'btn-secondary': !el.availability, 'btn-dark': el.availability}"
+              (click)="ajouterAuPanier(el)">
+              Ajouter au panier
             </button>
             <button class="btn btn-dark"><a [routerLink]="['/bracelet',el.id]">
                 Voir details </a><span></span>

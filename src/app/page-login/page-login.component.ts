@@ -2,6 +2,7 @@ import { Component, inject, OnInit } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { Router, RouterLink } from '@angular/router';
 import { LoginService } from '../login.service';
+import { AdminServiceService } from '../Service/admin-service.service';
 
 @Component({
   selector: 'app-page-login',
@@ -15,13 +16,18 @@ export class PageLoginComponent implements OnInit {
 
   readonly loginService:LoginService=inject(LoginService)
   readonly router:Router=inject(Router)
-  
-productForm=new FormGroup(
-{
-  userName:new FormControl(''),
-  password:new FormControl('')
+
+readonly adminService:AdminServiceService=inject(AdminServiceService)
+
+ngOnInit(): void {
+  this.adminService.getAdmin().subscribe(data=>data.forEach(admin=>
+    {localStorage.setItem("name",admin.name)
+    localStorage.setItem("email",admin.email)
+    localStorage.setItem("password",admin.password)
+    }
+  ))
+
 }
-)
 onSignUp(userName: string,password: string) {
   this.loginService.login(userName,password).subscribe
   (rep=>{
@@ -30,13 +36,7 @@ onSignUp(userName: string,password: string) {
     else
     alert('mdp et name incorrect')
   })
-
-
 }
-  
-  
-  ngOnInit() {
-    console.log('Page Login Loaded');
-  }
+
 
 }

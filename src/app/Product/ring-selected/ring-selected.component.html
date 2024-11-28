@@ -5,7 +5,7 @@
     <div class="row">
       <div class="col-md-6">
         <div class="image-container">
-          <img [src]="el.Images[0]" class="img-fluid product-image" alt="{{ el.name }}" id="mainImage" />
+          <img [src]="el.Images" class="img-fluid product-image" alt="{{ el.name }}" id="mainImage" />
         </div>
 
         <div class="sub-images mt-3">
@@ -44,7 +44,7 @@
       <h5>Commentaires :</h5>
       @for (com of el.commentaire; track $index) {
       <div class="comment-card p-2 mb-3">
-        <strong>{{ com.author }}</strong> {{ com.date }}
+        <strong>{{ com.author | uppercase}}</strong> {{ com.date }}
         <div class="d-flex align-items-center">
           <span class="text-muted ms-2">- {{ com.text }}</span>
         </div>

@@ -6,11 +6,12 @@ import { ProductSericeService } from '../../Service/product-serice.service';
 import { Product } from '../../Class/prouduct';
 import { DinarPipe } from '../../dinar.pipe';
 import { PanierServiceService } from '../../Service/panier-service.service';
+import { NgClass } from '@angular/common';
 
 @Component({
   selector: 'app-ring',
   standalone: true,
-  imports: [HeaderComponent,FooterComponent,RouterLink,DinarPipe],
+  imports: [HeaderComponent,FooterComponent,RouterLink,DinarPipe,NgClass],
   templateUrl: './ring.component.html',
   styleUrl: './ring.component.css'
 })

@@ -7,7 +7,7 @@ export const loginGuard: CanActivateFn = (route, state) => {
   if(stateConnexion==="connected")
     return true;
   else {
-    router.navigate(['/admin'])
+    router.navigate(['/login'])
     return false
   }
 };

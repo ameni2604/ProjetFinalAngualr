@@ -1,55 +1,28 @@
 {
-  "products": [
+  "admin": [
     {
-      "id": "6012",
-      "reference": "REF028",
-      "name": "Stone Bracelet",
-      "description": "The Stone Bracelet is a beautiful and versatile accessory that combines the natural beauty of semi-precious stones with a simple yet stylish design. Featuring a collection of carefully selected stones such as amethyst, turquoise, jade, or agate, each piece is unique, showcasing its natural color and texture. The stones are often strung on a durable elastic cord or fine metal chain, making it easy to wear and comfortable on the wrist. Ideal for adding a touch of color and energy to any outfit, the Stone Bracelet can be worn on its own for a minimalist look or stacked with other bracelets for a layered effect. This bracelet is perfect for both casual and formal occasions, offering a natural, earthy charm.",
-      "price": 18,
-      "sectionName": "Bracelets",
-      "material": "Amethyst, Turquoise, Jade, Agate, Elastic Cord, Metal",
-      "availability": true,
-      "weight": "25g",
-      "dimensions": "18x18x1 cm",
-      "colors": [
-        "Purple",
-        "Turquoise",
-        "Green",
-        "Multi-color"
-      ],
-      "Images": [
-        "https://ouchi.tn/6012/bracelet-à-main.jpg",
-        "https://ouchi.tn/6012/bracelet-à-main.jpg"
-      ],
-      "ListeDesImages": [
-        "https://ouchi.tn//6012//bracelet-/u00e0-main.jpg",
-        "https://ouchi.tn//6010//bracelet-/u00e0-main.jpg",
-        "https://ouchi.tn//6011//bracelet-/u00e0-main.jpg"
-      ],
-      "commentaire": [
-        {
-          "author": "Lily",
-          "text": "I absolutely love this bracelet! The stones are so vibrant, and I love how natural and unique each piece feels.",
-          "rating": 5,
-          "date": "10/02/2023"
-        },
-        {
-          "author": "Amelia",
-          "text": "This bracelet is a lovely addition to my collection. It's simple yet elegant, and the colors are so soothing. Perfect for everyday wear.",
-          "rating": 4,
-          "date": "11/02/2023"
-        }
-      ]
+      "email": "mohsen11@gmail.com",
+      "name": "mohsen",
+      "password": "yamina",
+      "id": "7368"
     },
+    {
+      "name": "sabri",
+      "email": "sabri22bb@gmail.com",
+      "password": "bb44",
+      "id": "0492"
+    }
+  ],
+  "products": [
     {
       "id": "6050",
       "reference": "REF029",
-      "name": "Flower Bracelet",
-      "description": "The Flower Bracelet is a delicate and feminine accessory, perfect for adding a touch of nature-inspired beauty to any outfit. Designed with intricately crafted flower motifs, this bracelet features small, elegant blooms that are often embellished with sparkling gemstones or enamel to highlight their details. Made from high-quality materials like sterling silver, gold, or rose gold, the Flower Bracelet combines refinement with a playful, floral charm. Whether worn for a casual day out or a special evening event, this bracelet is a perfect choice for those who want to embrace a fresh, nature-inspired aesthetic.",
-      "price": 35,
+      "name": "hdgqshqs",
+      "description": "jkqjkjslk",
+      "price": 55,
       "sectionName": "Bracelets",
       "material": "Sterling Silver, Gold, Rose Gold, Gemstones, Enamel",
-      "availability": true,
+      "availability": "",
       "weight": "40g",
       "dimensions": "18x18x0.5 cm",
       "colors": [
@@ -210,6 +183,12 @@
           "text": "The butterfly design is so elegant and charming. I love how it catches the light and adds a touch of magic to my wrist. It’s become one of my favorite accessories.",
           "rating": 5,
           "date": "13/09/2023"
+        },
+        {
+          "author": "User 1",
+          "text": "very beautiful",
+          "rating": 5,
+          "date": "27/11/2024"
         }
       ]
     },
@@ -691,6 +670,18 @@
           "text": "Absolutely stunning! The design is bold and elegant, and it adds an incredible touch of glam to any outfit.",
           "rating": 4.5,
           "date": "13/08/2023"
+        },
+        {
+          "author": "User 1",
+          "text": "nice",
+          "rating": 5,
+          "date": "27/11/2024"
+        },
+        {
+          "author": "User 1",
+          "text": "hi ",
+          "rating": 5,
+          "date": "28/11/2024"
         }
       ]
     },
@@ -1906,47 +1897,6 @@
       ]
     },
     {
-      "id": "3520",
-      "reference": "REF060",
-      "name": "Flower Earrings",
-      "description": "The Flower Earrings are a beautiful blend of femininity and elegance, inspired by the delicate beauty of blooming flowers. These earrings are crafted with intricate floral designs in materials like sterling silver, gold, or rose gold, often adorned with gemstones or enamel accents that add a touch of color and sparkle. Perfect for both casual wear and special occasions, they bring a charming, nature-inspired touch to any look. The Flower Earrings are an ideal accessory for adding a subtle, yet striking hint of floral beauty to your style, celebrating the timeless appeal of natural elegance.",
-      "price": 28,
-      "sectionName": "Earrings",
-      "material": "Sterling Silver, Gold, Rose Gold, Gemstones, Enamel",
-      "availability": true,
-      "weight": "9g",
-      "dimensions": "2x2x0.5 cm",
-      "colors": [
-        "Silver",
-        "Gold",
-        "Rose Gold",
-        "Multicolor"
-      ],
-      "Images": [
-        "https://ouchi.tn/3520/white-flower-earrings.jpg",
-        "https://ouchi.tn/3520/white-flower-earrings.jpg"
-      ],
-      "ListeDesImages": [
-        "https://ouchi.tn/3520/white-flower-earrings.jpg",
-        "https://ouchi.tn/3519/white-flower-earrings.jpg",
-        "https://ouchi.tn/3521/white-flower-earrings.jpg"
-      ],
-      "commentaire": [
-        {
-          "author": "Sophie",
-          "text": "Absolutely love these Flower Earrings! They’re so detailed and delicate. I wear them all the time, and they add the perfect floral touch to my outfits.",
-          "rating": 5,
-          "date": "10/11/2024"
-        },
-        {
-          "author": "Léa",
-          "text": "These earrings are gorgeous! The floral design is beautiful, and they feel really high-quality. Great for both casual and dressy looks.",
-          "rating": 5,
-          "date": "09/11/2024"
-        }
-      ]
-    },
-    {
       "id": "4557",
       "reference": "REF061",
       "name": "Bling Earrings",
@@ -2067,8 +2017,57 @@
           "text": "Love these earrings! They’re edgy and classy at the same time. They go with everything and add a cool, modern vibe.",
           "rating": 5,
           "date": "09/11/2024"
+        },
+        {
+          "author": "User 1",
+          "text": "salut",
+          "rating": 5,
+          "date": "28/11/2024"
         }
       ]
+    },
+    {
+      "id": "7963",
+      "reference": "REF306",
+      "name": "hdgdhgj",
+      "description": "jzdlajn",
+      "price": 777,
+      "sectionName": "Necklaces",
+      "material": "zxe rc'r' ",
+      "availability": "",
+      "weight": "10g",
+      "dimensions": "jehh he",
+      "Images": "https://ouchi.tn/3557/boucles-d-oreilles-x.jpg",
+      "ListeDesImages": [
+        "https://ouchi.tn/3551/boucles-d-oreilles-fleur.jpg",
+        "https://ouchi.tn/3557/boucles-d-oreilles-x.jpg"
+      ],
+      "colors": [
+        "red",
+        "yellow"
+      ],
+      "commentaire": []
+    },
+    {
+      "id": "7675",
+      "reference": "REF517",
+      "name": "Test",
+      "description": "jknbkuezhi",
+      "price": 4,
+      "sectionName": "Bracelets",
+      "material": "liueé",
+      "availability": true,
+      "weight": "120g",
+      "dimensions": "zn",
+      "Images": "https://ouchi.tn/3557/boucles-d-oreilles-x.jpg",
+      "ListeDesImages": [
+        "https://ouchi.tn/3551/boucles-d-oreilles-fleur.jpg",
+        "https://ouchi.tn/3551/boucles-d-oreilles-fleur.jpg"
+      ],
+      "colors": [
+        "red"
+      ],
+      "commentaire": []
     }
   ]
 }

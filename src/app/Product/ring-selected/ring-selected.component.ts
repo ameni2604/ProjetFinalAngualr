@@ -4,7 +4,7 @@ import { HeaderComponent } from "../../Header/header/header.component";
 import { ActivatedRoute } from '@angular/router';
 import { Product } from '../../Class/prouduct';
 import { ProductSericeService } from '../../Service/product-serice.service';
-import { CurrencyPipe } from '@angular/common';
+import { CurrencyPipe, UpperCasePipe } from '@angular/common';
 import { DinarPipe } from '../../dinar.pipe';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { PanierServiceService } from '../../Service/panier-service.service';
@@ -12,12 +12,12 @@ import { PanierServiceService } from '../../Service/panier-service.service';
 @Component({
   selector: 'app-ring-selected',
   standalone: true,
-  imports: [FooterComponent, HeaderComponent,DinarPipe,ReactiveFormsModule],
+  imports: [FooterComponent, HeaderComponent,DinarPipe,ReactiveFormsModule,UpperCasePipe],
   templateUrl: './ring-selected.component.html',
   styleUrl: './ring-selected.component.css'
 })
 export class RingSelectedComponent {
-  identifiant:number=0;
+  identifiant:string='';
   activatedRoute:ActivatedRoute=inject(ActivatedRoute);
   productId:Product[]=[];
   comForm!:FormGroup;
@@ -45,7 +45,7 @@ export class RingSelectedComponent {
 
     }
   
-ajouterCommentaire(id: number) {
+ajouterCommentaire(id: string) {
   const commentaire = {
   author: 'User 1', 
   text: this.getCom(),
